@@ -26,6 +26,10 @@ local on_attach = function(client, bufnr)
 	if client.name == "stylelint_lsp" then
 		client.resolved_capabilities.document_formatting = false
 	end
+	if client.name == jsonls then
+		client.resolved_capabilities.document_formatting = false
+	end
+
 	-- Enable completion triggered by <c-x><c-o>
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
