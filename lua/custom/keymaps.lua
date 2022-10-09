@@ -31,9 +31,9 @@ keymap("n", "<leader>rn", "<cmd> set rnu! <CR>", opts) -- toggle relative number
 keymap("n", "<leader>e", "<cmd> NvimTreeFocus <CR>", opts) -- open and focus on nvimtree
 keymap("n", "<C-n>", "<cmd> NvimTreeToggle <CR>", opts) -- toggle nvimtree
 
-
 -- telescope normal mode
 keymap("n", "<leader>ff", "<cmd> Telescope find_files <CR>", opts)
+keymap("n", "<leader>fb", "<cmd> Telescope buffers <CR>", opts)
 keymap("n", "<leader>fw", "<cmd> Telescope live_grep <CR>", opts)
 keymap("n", "<leader>tk", "<cmd> Telescope keymaps <CR>", opts)
 keymap("n", "<leader>cm", "<cmd> Telescope git_commits <CR>", opts)
