@@ -26,7 +26,7 @@ local on_attach = function(client, bufnr)
 	if client.name == "stylelint_lsp" then
 		client.resolved_capabilities.document_formatting = false
 	end
-	if client.name == jsonls then
+	if client.name == "jsonls" then
 		client.resolved_capabilities.document_formatting = false
 	end
 
