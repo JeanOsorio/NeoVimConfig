@@ -26,7 +26,7 @@ keymap("n", "<TAB>", ":bnext<CR>", opts) -- navigate to the rifght buffer
 keymap("n", "<S-TAB>", ":bprevious<CR>", opts) -- navitate to the left buffer
 keymap("n", "<leader>n", "<cmd> set nu! <CR>", opts) -- toggle number
 keymap("n", "<leader>rn", "<cmd> set rnu! <CR>", opts) -- toggle relative number
-
+keymap("n", "<leader>x", ":q <CR>", opts) --close buffer
 -- nvim tree normal mode
 keymap("n", "<leader>e", "<cmd> NvimTreeFocus <CR>", opts) -- open and focus on nvimtree
 keymap("n", "<C-n>", "<cmd> NvimTreeToggle <CR>", opts) -- toggle nvimtree
