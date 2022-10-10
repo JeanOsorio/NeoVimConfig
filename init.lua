@@ -12,6 +12,7 @@ require("custom.treesitter")
 require("custom.autopairs")
 require("custom.comment")
 require("custom.feline")
+require("custom.gitsigns")
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1

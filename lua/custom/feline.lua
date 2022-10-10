@@ -2,6 +2,12 @@ local clrs = require("catppuccin.palettes").get_palette()
 local ctp_feline = require("catppuccin.groups.integrations.feline")
 
 ctp_feline.setup({
+	integrations = {
+		telescope = true,
+		treesitter = true,
+		nvimtree = true,
+		gitsigns = true,
+	},
 	assets = {
 		left_separator = "",
 		right_separator = "",

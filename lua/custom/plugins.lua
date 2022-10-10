@@ -109,6 +109,8 @@ return packer.startup(function(use)
 		end,
 	})
 
+	use("lewis6991/gitsigns.nvim")
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
