@@ -20,9 +20,6 @@ local on_attach = function(client, bufnr)
 	if client.name == "sumneko_lua" then
 		client.resolved_capabilities.document_formatting = false
 	end
-	if client.name == "denols" then
-		client.resolved_capabilities.document_formatting = false
-	end
 	if client.name == "stylelint_lsp" then
 		client.resolved_capabilities.document_formatting = false
 	end
@@ -92,11 +89,6 @@ require("lspconfig")["emmet_ls"].setup({
 })
 
 require("lspconfig")["stylelint_lsp"].setup({
-	on_attach = on_attach,
-	flags = lsp_flags,
-})
-
-require("lspconfig").denols.setup({
 	on_attach = on_attach,
 	flags = lsp_flags,
 })
