@@ -145,6 +145,9 @@ return packer.startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
+	-- gitdiff
+	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
