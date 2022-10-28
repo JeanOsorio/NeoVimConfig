@@ -31,7 +31,8 @@ keymap("n", "<ESC>", ":noh <CR>", opts) --no highlight
 -- nvim tree normal mode
 keymap("n", "<leader>e", "<cmd> NvimTreeFocus <CR>", opts) -- open and focus on nvimtree
 keymap("n", "<C-n>", "<cmd> NvimTreeToggle <CR>", opts) -- toggle nvimtree
-
+-- barbar
+keymap("n", "<leader>x", "<cmd> BufferClose <CR>", opts)
 -- telescope normal mode
 keymap("n", "<leader>ff", "<cmd> Telescope find_files <CR>", opts)
 keymap("n", "<leader>fb", "<cmd> Telescope buffers <CR>", opts)
