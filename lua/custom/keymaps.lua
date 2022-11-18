@@ -28,6 +28,7 @@ keymap("n", "<leader>n", "<cmd> set nu! <CR>", opts) -- toggle number
 keymap("n", "<leader>rn", "<cmd> set rnu! <CR>", opts) -- toggle relative number
 keymap("n", "<leader>x", ":q <CR>", opts) --close buffer
 keymap("n", "<ESC>", ":noh <CR>", opts) --no highlight
+keymap("n", "<A-t>", "<C-w>s :term <CR>", opts) --open terminal horizontal
 -- nvim tree normal mode
 keymap("n", "<leader>e", "<cmd> NvimTreeFocus <CR>", opts) -- open and focus on nvimtree
 keymap("n", "<C-n>", "<cmd> NvimTreeToggle <CR>", opts) -- toggle nvimtree

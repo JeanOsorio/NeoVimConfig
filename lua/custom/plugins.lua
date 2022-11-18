@@ -88,7 +88,14 @@ return packer.startup(function(use)
 		run = ":TSUpdate",
 	})
 
+	-- comments
 	use("JoosepAlviste/nvim-ts-context-commentstring")
+	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	})
 
 	use("p00f/nvim-ts-rainbow")
 
