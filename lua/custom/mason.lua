@@ -9,6 +9,6 @@ require("mason").setup({
 })
 
 require("mason-lspconfig").setup({
-	ensure_installed = { "sumneko_lua", "tsserver", "jsonls", "emmet_ls", "stylelint_lsp", "solidity", "solhint" },
+	ensure_installed = { "lua_ls", "tsserver", "jsonls", "emmet_ls", "stylelint_lsp", "solidity", "solhint" },
 	automatic_installation = true,
 })
