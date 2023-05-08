@@ -122,7 +122,14 @@ return packer.startup(function(use)
   })
 
   -- themes
-  use("rebelot/kanagawa.nvim")
+  use({
+    "rebelot/kanagawa.nvim",
+    as = "kanagawa",
+    config = function()
+      require("kanagawa").setup()
+      vim.cmd("colorscheme kanagawa-dragon")
+    end,
+  })
 
   use("lewis6991/gitsigns.nvim")
 
