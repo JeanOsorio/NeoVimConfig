@@ -110,6 +110,7 @@ return packer.startup(function(use)
 
   -- status bar plugins
   use("feline-nvim/feline.nvim")
+  -- themes
   use({
     "catppuccin/nvim",
     as = "catppuccin",
@@ -119,6 +120,9 @@ return packer.startup(function(use)
       vim.api.nvim_command("colorscheme catppuccin")
     end,
   })
+
+  -- themes
+  use("rebelot/kanagawa.nvim")
 
   use("lewis6991/gitsigns.nvim")
 
