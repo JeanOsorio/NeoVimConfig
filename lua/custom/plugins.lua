@@ -46,6 +46,8 @@ return packer.startup(function(use)
   use("nvim-lua/plenary.nvim")  -- Useful lua functions used ny lots of plugins
   use("windwp/nvim-autopairs")  -- Autopairs, integrates with both cmp and treesitter
   use("numToStr/Comment.nvim")  -- Easily comment stuff
+  use("nvim-tree/nvim-web-devicons")
+  use("lewis6991/gitsigns.nvim")
   -- nvim-tree to explorer files
   use({
     "kyazdani42/nvim-tree.lua",
@@ -87,11 +89,13 @@ return packer.startup(function(use)
   use("nvim-telescope/telescope-media-files.nvim")
 
   -- Treesitter
-  use({
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
-  })
-
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end,
+  }
   use({
     "nvim-treesitter/nvim-treesitter-context",
   })
@@ -134,8 +138,6 @@ return packer.startup(function(use)
       --[[ vim.cmd("colorscheme kanagawa-dragon") ]]
     end,
   })
-
-  use("lewis6991/gitsigns.nvim")
 
   -- open tabs
   use({
