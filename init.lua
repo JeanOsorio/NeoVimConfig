@@ -8,7 +8,7 @@ require("custom.lsp")
 require("custom.mason")
 require("custom.telescope")
 -- require("custom.null-ls")
-require("custom.formatter")
+--require("custom.formatter")
 require("custom.treesitter")
 require("custom.treesitter-context")
 require("custom.autopairs")
@@ -19,3 +19,4 @@ require("custom.barbar")
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
