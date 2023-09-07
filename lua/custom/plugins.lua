@@ -45,7 +45,6 @@ return packer.startup(function(use)
   use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
   use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
   use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
-  use("numToStr/Comment.nvim") -- Easily comment stuff
   use("nvim-tree/nvim-web-devicons")
   use("lewis6991/gitsigns.nvim")
   use('tpope/vim-fugitive')
@@ -81,7 +80,7 @@ return packer.startup(function(use)
   use("williamboman/mason.nvim")
   use("williamboman/mason-lspconfig.nvim")
   use("neovim/nvim-lspconfig") -- enable
-
+  use("lukas-reineke/lsp-format.nvim")
   -- Telescope
   use({
     "nvim-telescope/telescope.nvim",
@@ -173,9 +172,6 @@ return packer.startup(function(use)
 
   -- gitdiff
   use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
-
-  -- fugitive
-  use("tpope/vim-fugitive")
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
