@@ -48,6 +48,10 @@ local on_attach = function(client, bufnr)
   vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, bufopts)
   vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
   vim.keymap.set("n", "<space>fm", vim.lsp.buf.format, bufopts)
+  vim.keymap.set("n", "<space>fn", function()
+    vim.cmd([[silent !prettier --write %]])
+    vim.cmd([[edit]]) -- Refrescar el buffer para ver los cambios
+  end, { noremap = true, silent = true })
 end
 
 local lsp_flags = {

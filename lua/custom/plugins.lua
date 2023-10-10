@@ -80,7 +80,6 @@ return packer.startup(function(use)
   use("williamboman/mason.nvim")
   use("williamboman/mason-lspconfig.nvim")
   use("neovim/nvim-lspconfig") -- enable
-  use("lukas-reineke/lsp-format.nvim")
   -- Telescope
   use({
     "nvim-telescope/telescope.nvim",
