@@ -42,9 +42,9 @@ packer.init({
 return packer.startup(function(use)
   -- My plugins here
   use("wbthomason/packer.nvim") -- Have packer manage itself
-  use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
-  use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
-  use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
+  use("nvim-lua/popup.nvim")    -- An implementation of the Popup API from vim in Neovim
+  use("nvim-lua/plenary.nvim")  -- Useful lua functions used ny lots of plugins
+  use("windwp/nvim-autopairs")  -- Autopairs, integrates with both cmp and treesitter
   use("nvim-tree/nvim-web-devicons")
   use("lewis6991/gitsigns.nvim")
   use('tpope/vim-fugitive')
@@ -54,7 +54,7 @@ return packer.startup(function(use)
     requires = {
       "kyazdani42/nvim-web-devicons", -- optional, for file icons
     },
-    tag = "nightly", -- optional, updated every week. (see issue #1193)
+    tag = "nightly",                  -- optional, updated every week. (see issue #1193)
   })
 
   -- colorschema themes
@@ -64,16 +64,16 @@ return packer.startup(function(use)
   use("maxmx03/fluoromachine.nvim")
 
   -- cmp plugins
-  use("hrsh7th/nvim-cmp") -- The completion plugin
-  use("hrsh7th/cmp-buffer") -- buffer completions
-  use("hrsh7th/cmp-path") -- path completions
-  use("hrsh7th/cmp-cmdline") -- cmdline completions
+  use("hrsh7th/nvim-cmp")         -- The completion plugin
+  use("hrsh7th/cmp-buffer")       -- buffer completions
+  use("hrsh7th/cmp-path")         -- path completions
+  use("hrsh7th/cmp-cmdline")      -- cmdline completions
   use("saadparwaiz1/cmp_luasnip") -- snippet completions
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-nvim-lua")
 
   -- snippets
-  use("L3MON4D3/LuaSnip") --snippet engine
+  use("L3MON4D3/LuaSnip")             --snippet engine
   use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
   -- LSP
@@ -148,13 +148,13 @@ return packer.startup(function(use)
           section_separators = { "", "" },
           component_separators = { "", "" },
           max_bufferline_percent = 66, -- set to nil by default, and it uses vim.o.columns * 2/3
-          show_tabs_always = false, -- this shows tabs only when there are more than one tab or if the first tab is named
-          show_devicons = true, -- this shows devicons in buffer section
-          show_bufnr = false, -- this appends [bufnr] to buffer section,
-          show_filename_only = false, -- shows base filename only instead of relative path in filename
-          modified_icon = "+ ", -- change the default modified icon
-          modified_italic = false, -- set to true by default; this determines whether the filename turns italic if modified
-          show_tabs_only = false, -- this shows only tabs instead of tabs + buffers
+          show_tabs_always = false,    -- this shows tabs only when there are more than one tab or if the first tab is named
+          show_devicons = true,        -- this shows devicons in buffer section
+          show_bufnr = false,          -- this appends [bufnr] to buffer section,
+          show_filename_only = false,  -- shows base filename only instead of relative path in filename
+          modified_icon = "+ ",        -- change the default modified icon
+          modified_italic = false,     -- set to true by default; this determines whether the filename turns italic if modified
+          show_tabs_only = false,      -- this shows only tabs instead of tabs + buffers
         },
       })
       vim.cmd([[
@@ -171,6 +171,9 @@ return packer.startup(function(use)
 
   -- gitdiff
   use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
+
+  -- prettier
+  use { 'prettier/vim-prettier', run = 'npm install' }
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
