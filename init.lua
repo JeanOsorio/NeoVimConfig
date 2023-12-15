@@ -17,18 +17,18 @@ require("custom.feline")
 require("custom.gitsigns")
 require("custom.barbar")
 -- disable netrw at the very start of your init.lua (strongly advised)
-vim.g.loaded = 1
-vim.g.loaded_netrwPlugin = 1
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
-vim.cmd([[
-function! FormatAndReload()
-  silent !prettier --write %
-  checktime
-endfunction
-]])
-vim.cmd([[
-  augroup FormatOnSave
-    autocmd!
-    autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.json,*.md execute ':silent !prettier --write <afile>' | edit
-  augroup END
-]])
+-- [[ vim.g.loaded = 1 ]]
+-- [[ vim.g.loaded_netrwPlugin = 1 ]]
+-- [[ vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]] ]]
+-- [[ vim.cmd([[ ]]
+-- [[ function! FormatAndReload() ]]
+-- [[   silent !prettier --write % ]]
+-- [[   checktime ]]
+-- [[ endfunction ]]
+-- [[ ]]) ]]
+-- [[ vim.cmd([[ ]]
+-- [[   augroup FormatOnSave ]]
+-- [[     autocmd! ]]
+-- [[     autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.json,*.md execute ':silent !prettier --write <afile>' | edit ]]
+-- [[   augroup END ]]
+-- [[ ]]) ]]

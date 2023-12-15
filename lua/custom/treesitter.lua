@@ -18,8 +18,15 @@ configs.setup {
     -- termcolors = {} -- table of colour name strings
   },
   indent = { enable = true, disable = { "" } },
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
+  -- context_commentstring = {
+  --  enable = true,
+  --  enable_autocmd = false,
+  -- },
+}
+
+require('ts_context_commentstring').setup {
+  enable_autocmd = false,
+  languages = {
+    typescript = '// %s',
   },
 }

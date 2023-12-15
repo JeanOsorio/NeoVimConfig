@@ -80,6 +80,8 @@ return packer.startup(function(use)
   use("williamboman/mason.nvim")
   use("williamboman/mason-lspconfig.nvim")
   use("neovim/nvim-lspconfig") -- enable
+  use("JoosepAlviste/nvim-ts-context-commentstring")
+  use("MunifTanjim/prettier.nvim")
   -- Telescope
   use({
     "nvim-telescope/telescope.nvim",
@@ -100,7 +102,6 @@ return packer.startup(function(use)
   })
 
   -- comments
-  use("JoosepAlviste/nvim-ts-context-commentstring")
   use({
     "numToStr/Comment.nvim",
     config = function()
